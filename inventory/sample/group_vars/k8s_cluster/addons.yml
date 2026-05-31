@@ -168,7 +168,7 @@ metallb_ip_range: "192.168.20.200-192.168.20.210"
 #           address_pool:
 #             - pool2
 
-argocd_enabled: false
+argocd_enabled: true
 # argocd_namespace: argocd
 # Default password:
 #   - https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli
