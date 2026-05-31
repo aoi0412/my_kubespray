@@ -1,7 +1,5 @@
----
 # Helm deployment
 helm_enabled: false
-
 # Registry deployment
 registry_enabled: false
 # registry_namespace: kube-system
@@ -62,7 +60,6 @@ local_volume_provisioner_enabled: false
 
 # Gateway API CRDs
 gateway_api_enabled: false
-
 # ALB ingress controller deployment
 ingress_alb_enabled: false
 # alb_ingress_aws_region: "us-east-1"
@@ -107,9 +104,10 @@ cert_manager_enabled: false
 #   - "--dns01-recursive-nameservers=1.1.1.1:53,8.8.8.8:53"
 
 # MetalLB deployment
-metallb_enabled: false
+metallb_enabled: true
 metallb_speaker_enabled: "{{ metallb_enabled }}"
 metallb_namespace: "metallb-system"
+metallb_ip_range: "192.168.20.200-192.168.20.210"
 # metallb_protocol: "layer2"
 # metallb_port: "7472"
 # metallb_memberlist_port: "7946"
